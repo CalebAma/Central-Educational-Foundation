@@ -7,7 +7,7 @@
     <!-- Favicon Placeholder (Dark Green CEF icon) -->
     <link rel="icon" href="cef.png" type="image/png">
     <!-- Google Fonts: Poppins for headings, Inter for body text -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family="Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -110,7 +110,7 @@
     <header class="bg-green-700 text-white py-4 px-6 shadow-xl sticky top-0 z-50 rounded-b-lg">
         <nav class="container mx-auto flex items-center justify-between relative"> <!-- Added relative for mobile menu positioning -->
             <div class="flex items-center flex-shrink-0">
-                <!-- Logo Placeholder (White Logo on Dark Green background) -->
+                <!-- Logo Placeholder (Dark Green CEF icon) -->
                 <img src="cef.png" alt="Central Educational Foundation Logo" class="h-12 w-12 mr-3 rounded-full shadow-md transform hover:scale-110 transition duration-300">
                 <!-- Stacked School Name -->
                 <a href="#hero" class="flex flex-col text-center font-extrabold drop-shadow-lg hover:text-green-200 transition duration-300 leading-tight">
@@ -127,14 +127,12 @@
             </button>
 
             <!-- Navigation Links -->
-            <ul id="mobile-menu" class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 text-lg font-semibold items-center">
+            <ul id="mobile-menu" class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 text-lg font-semibold items-center md:ml-auto">
                 <li><a href="#about" class="nav-link hover:bg-green-600 hover:text-white transition duration-300 rounded-full py-2 px-3 block text-center">About Us</a></li>
                 <li><a href="#academics" class="nav-link hover:bg-green-600 hover:text-white transition duration-300 rounded-full py-2 px-3 block text-center">Academics</a></li>
                 <li><a href="#admissions" class="nav-link hover:bg-green-600 hover:text-white transition duration-300 rounded-full py-2 px-3 block text-center">Admissions</a></li>
                 <li><a href="#gallery" class="nav-link hover:bg-green-600 hover:text-white transition duration-300 rounded-full py-2 px-3 block text-center">Gallery</a></li>
-                <li><a href="#extracurriculars" class="nav-link hover:bg-green-600 hover:text-white transition duration-300 rounded-full py-2 px-3 block text-center">Activities</a></li>
-                <li><a href="#team" class="nav-link hover:bg-green-600 hover:text-white transition duration-300 rounded-full py-2 px-3 block text-center">Our Team</a></li>
-                <li><a href="#testimonials" class="nav-link hover:bg-green-600 hover:text-white transition duration-300 rounded-full py-2 px-3 block text-center">Testimonials</a></li>
+                <li><a href="#our-team" class="nav-link hover:bg-green-600 hover:text-white transition duration-300 rounded-full py-2 px-3 block text-center">Our Team</a></li>
                 <li><a href="#news" class="nav-link hover:bg-green-600 hover:text-white transition duration-300 rounded-full py-2 px-3 block text-center">News</a></li>
                 <li><a href="#contact" class="nav-link hover:bg-green-600 hover:text-white transition duration-300 rounded-full py-2 px-3 block text-center">Contact</a></li>
             </ul>
@@ -142,7 +140,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative bg-cover bg-center h-screen flex items-center justify-center text-white" style="background-image: url('students\ .jpg');">
+    <section id="hero" class="relative bg-cover bg-center h-screen flex items-center justify-center text-white" style="background-image: url('students .jpg');">
         <div class="hero-overlay absolute inset-0"></div>
         <div class="z-10 text-center p-8 rounded-xl bg-black/10 backdrop-blur-lg border border-white/20 max-w-4xl mx-auto shadow-2xl">
             <h1 class="text-6xl md:text-7xl font-extrabold leading-tight drop-shadow-lg mb-6">Central Educational Foundation</h1>
@@ -226,7 +224,7 @@
                     <p class="text-lg text-gray-700">Successful applicants will be invited for an entrance examination and a brief interview.</p>
                 </div>
             </div>
-            <p class="mt-12 text-xl text-gray-700">Ready to learn more? <a href="https://placehold.co/300x200/FF0000/FFFFFF?text=PROSPECTUS.PDF" target="_blank" class="text-red-600 hover:underline font-semibold">Download our Prospectus (PDF)</a> or <a href="#contact" class="text-green-600 hover:underline font-semibold">contact us</a> for details.</p>
+            <p class="mt-12 text-xl text-gray-700">Ready to learn more? <a href="#" class="text-red-600 hover:underline font-semibold">Get Admission Forms</a> or <a href="#contact" class="text-green-600 hover:underline font-semibold">contact us</a> for details.</p>
         </div>
     </section>
 
@@ -238,29 +236,29 @@
 
             <!-- Image Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 rounded-xl shadow-lg border border-white/20 p-4">
-                <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition duration-300">
-                    <img src="students .jpg" alt="School Event 1" class="w-full h-48 object-cover">
+                <div class="rounded-lg overflow-hidden shadow-md group">
+                    <img src="students .jpg" alt="School Event 1" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out">
                 </div>
-                <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition duration-300">
-                    <img src="class.jpg" alt="class" class="w-full h-48 object-cover">
+                <div class="rounded-lg overflow-hidden shadow-md group">
+                    <img src="class.jpg" alt="class" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out">
                 </div>
-                <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition duration-300">
-                    <img src="sportday.jpg" alt="Sports Day" class="w-full h-48 object-cover">
+                <div class="rounded-lg overflow-hidden shadow-md group">
+                    <img src="sportday.jpg" alt="Sports Day" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out">
                 </div>
-                <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition duration-300">
-                    <img src="african day.jpg" alt="African Day" class="w-full h-48 object-cover">
+                <div class="rounded-lg overflow-hidden shadow-md group">
+                    <img src="african day.jpg" alt="African Day" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out">
                 </div>
-                <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition duration-300">
-                    <img src="perfrom.jpg" alt="Perform" class="w-full h-48 object-cover">
+                <div class="rounded-lg overflow-hidden shadow-md group">
+                    <img src="perfrom.jpg" alt="Perform" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out">
                 </div>
-                <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition duration-300">
-                    <img src="funday2.jpg" alt="Funday" class="w-full h-48 object-cover">
+                <div class="rounded-lg overflow-hidden shadow-md group">
+                    <img src="funday2.jpg" alt="Funday" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out">
                 </div>
-                <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition duration-300">
-                    <img src="cadet1.jpg" alt="cadet" class="w-full h-48 object-cover">
+                <div class="rounded-lg overflow-hidden shadow-md group">
+                    <img src="cadet1.jpg" alt="cadet" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out">
                 </div>
-                <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition duration-300">
-                    <img src="IMG-20250819-WA0060.jpg" alt="Teachers" class="w-full h-48 object-cover">
+                <div class="rounded-lg overflow-hidden shadow-md group">
+                    <img src="IMG-20250819-WA0060.jpg" alt="Teachers" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out">
                 </div>
             </div>
         </div>
@@ -303,32 +301,72 @@
         </div>
     </section>
 
-    <!-- Meet Our Team Section -->
-    <section id="team" class="py-20 bg-amber-100 rounded-lg shadow-inner-lg my-10 mx-auto max-w-7xl px-6 lg:px-8">
+    <!-- Head Teacher's Welcome Message Section -->
+    <section id="head-teacher-message" class="py-20 bg-green-50 rounded-lg shadow-xl my-10 mx-auto max-w-7xl px-8 lg:px-12 border border-green-200">
         <div class="container mx-auto text-center">
-            <h2 class="text-5xl font-extrabold text-green-800 mb-8 pb-4 border-b-4 border-green-200 inline-block">Meet Our Dedicated Team</h2>
-            <p class="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">Our passionate educators and staff are committed to your child's success.</p>
+            <h2 class="text-5xl font-extrabold text-green-800 mb-8 pb-4 border-b-4 border-green-300 inline-block">A Message from Our Head Teacher</h2>
+            <!-- Changed from grid to a single column for landscape feel -->
+            <div class="max-w-4xl mx-auto text-left space-y-6 bg-white/70 backdrop-blur-md p-8 rounded-xl shadow-lg border border-white/50">
+                <p>Dear Parents, Guardians, and Esteemed Students,</p>
+                <p>It is with immense pleasure that I welcome you to Central Educational Foundation. Our school is more than just an institution; it's a vibrant community where dreams are nurtured, talents are honed, and future leaders are forged. We are committed to providing an exceptional educational experience that balances rigorous academics with rich extracurricular activities, all within a supportive and inclusive environment.</p>
+                <p>Our dedicated educators strive to inspire curiosity, foster critical thinking, and instill values of integrity, respect, and perseverance. We believe in empowering each child to discover their full potential, encouraging them to excel not only in their studies but also in their personal growth and contribution to society.</p>
+                <p>Thank you for choosing Central Educational Foundation. We look forward to partnering with you in your child's educational journey.</p>
+                <div class="mt-6 text-right">
+                    <img src="HeadTeacher.jpg" alt="Mr. Benjamin Eyison - Head Teacher" class="rounded-full w-24 h-24 mx-auto md:mx-0 mb-2 shadow-md inline-block align-middle mr-4">
+                    <span class="text-xl font-bold text-green-700 block md:inline-block">Mr. Benjamin Eyison</span>
+                    <span class="block text-lg text-gray-600 md:inline-block md:ml-2">(Head Teacher)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section (Combined Leadership and Management) -->
+    <section id="our-team" class="py-20 bg-amber-100 rounded-lg shadow-inner-lg my-10 mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-extrabold text-green-800 mb-8 pb-4 border-b-4 border-green-200 inline-block">Our Team</h2>
+            <p class="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">Meet the passionate individuals dedicated to guiding and supporting our school community.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Team Member 1 -->
+                <!-- Head Teacher -->
                 <div class="bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-lg border border-white/20">
                     <img src="HeadTeacher.jpg" alt="Mr. Benjamin Eyison - Head Teacher" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md">
                     <h3 class="text-2xl font-bold text-green-700">Mr. Benjamin Eyison</h3>
                     <p class="text-lg text-gray-600">Head Teacher</p>
                     <p class="text-sm mt-2">"Committed to nurturing holistic growth in every child."</p>
                 </div>
-                <!-- Team Member 2 -->
+                <!-- Assistant Head Teacher -->
                 <div class="bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-lg border border-white/20">
-                    <img src="Rebecca.jpg" alt="Mr. Robert - Academic Coordinator" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md">
-                    <h3 class="text-2xl font-bold text-green-700">Mrs. Rebecca Wilson</h3>
+                    <img src="Rebecca.jpg" alt="Mrs. Rebecca Wilson - Assistant Head Teacher" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md">
+                    <h3 class="text-2xl font-bold text-green-700">Mrs. Rebecca Wilson</h3>
                     <p class="text-lg text-gray-600">Assistant Head Teacher</p>
                     <p class="text-sm mt-2">"Fostering a love for learning and academic excellence."</p>
                 </div>
-                <!-- Team Member 3 -->
+                <!-- Administrator -->
                 <div class="bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-lg border border-white/20">
-                    <img src="Nat.jpg" alt="Mr. Nathaniel Fotwe - Admissions Officer" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md">
+                    <img src="Nat.jpg" alt="Mr. Nathaniel Fotwe - Administrator" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md">
                     <h3 class="text-2xl font-bold text-green-700">Mr. Nathaniel Fotwe</h3>
                     <p class="text-lg text-gray-600">Administrator</p>
                     <p class="text-sm mt-2">"Guiding new families through a smooth admission process."</p>
+                </div>
+                <!-- HOD 1: Kwesi Sey -->
+                <div class="bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-lg border border-white/20">
+                    <img src="https://placehold.co/128x128/d1fae5/10b981?text=KS" alt="Kwesi Sey" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md object-cover">
+                    <h3 class="text-2xl font-bold text-green-700">Mr. Kwesi Sey</h3>
+                    <p class="text-lg text-gray-600">HOD, Upper Primary & JHS</p>
+                    <p class="text-sm mt-2">"Fostering academic rigor and character development for our older students."</p>
+                </div>
+                <!-- HOD 2: Odette Mensah -->
+                <div class="bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-lg border border-white/20">
+                    <img src="https://placehold.co/128x128/d1fae5/10b981?text=OM" alt="Odette Mensah" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md object-cover">
+                    <h3 class="text-2xl font-bold text-green-700">Ms. Odette Mensah</h3>
+                    <p class="text-lg text-gray-600">HOD, KG & Lower Primary</p>
+                    <p class="text-sm mt-2">"Nurturing early learning and building strong foundations for our youngest learners."</p>
+                </div>
+                <!-- HOD 3: Susuana Mensah -->
+                <div class="bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-lg border border-white/20">
+                    <img src="https://placehold.co/128x128/d1fae5/10b981?text=SM" alt="Susuana Mensah" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md object-cover">
+                    <h3 class="text-2xl font-bold text-green-700">Ms. Susuana Mensah</h3>
+                    <p class="text-lg text-gray-600">HOD, DayCare Department</p>
+                    <p class="text-sm mt-2">"Providing a safe, stimulating, and caring environment for our little ones."</p>
                 </div>
             </div>
         </div>
@@ -388,7 +426,7 @@
                     <div class="space-y-6 text-lg">
                         <p><strong class="font-semibold text-green-800">Address:</strong> Cape Coast Behind PWD TanTri, Ghana</p>
                         <p><strong class="font-semibold text-green-800">Phone:</strong> +233 24 258 3476</p>
-                        <p><strong class="font-semibold text-green-800">Email:</strong> info@centraleducationalfoundation.edu.gh</p>
+                        <p><strong class="font-semibold text-green-800">Email:</b> info@centraleducationalfoundation.edu.gh</p>
                         <p><strong class="font-semibold text-green-800">Office Hours:</strong> Mon-Fri, 8:00 AM - 4:00 PM</p>
                     </div>
                     <!-- Google Map Embed -->
