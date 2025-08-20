@@ -17,7 +17,8 @@
         }
         body {
             font-family: 'Inter', sans-serif; /* Default body font */
-            @apply text-gray-800 bg-amber-50; /* Apply default text and background colors */
+            color: #374151; /* text-gray-800 */
+            background-color: #FFFBEB; /* bg-amber-50 */
         }
         h1, h2, h3 {
             font-family: 'Poppins', sans-serif; /* Headings font */
@@ -34,20 +35,6 @@
         #scrollToTopBtn.show {
             opacity: 1;
         }
-        /* Carousel specific styles */
-        .carousel-container {
-            overflow: hidden;
-            width: 100%;
-        }
-        .carousel-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .carousel-slide {
-            min-width: 100%;
-            flex-shrink: 0;
-        }
-
         /* Hamburger icon styling */
         .hamburger {
             cursor: pointer;
@@ -112,6 +99,7 @@
                 background-color: transparent; /* Remove background on desktop */
                 flex-direction: row; /* Ensure row direction for desktop */
                 box-shadow: none;
+                display: flex !important; /* Ensure it's always visible on desktop */
             }
         }
     </style>
@@ -158,7 +146,7 @@
         <div class="hero-overlay absolute inset-0"></div>
         <div class="z-10 text-center p-8 rounded-xl bg-black/10 backdrop-blur-lg border border-white/20 max-w-4xl mx-auto shadow-2xl">
             <h1 class="text-6xl md:text-7xl font-extrabold leading-tight drop-shadow-lg mb-6">Central Educational Foundation</h1>
-            <p class="text-3xl md:text-4xl italic font-light drop-shadow-md">"Empowering Tomorrow's Leaders Today"</p>
+            <p class="text-3xl md:text-4xl italic font-light drop-shadow-md">"Raising Leaders , Shaping Vision , Influencing Society through Christ"</p>
             <a href="#admissions" class="mt-10 inline-block bg-red-600 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg hover:bg-red-500 transition duration-300 transform hover:scale-105">Enroll Now!</a>
         </div>
     </section>
@@ -175,7 +163,7 @@
                 <div>
                     <!-- Placeholder for school video -->
                     <div class="relative w-full aspect-video rounded-xl shadow-xl overflow-hidden">
-                        <iframe class="absolute inset-0 w-full h-full" src="https://youtu.be/lrOWUJm5BnU" title="School Promotional Video Placeholder" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/lrOWUJm5BnU" title="School Promotional Video Placeholder" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <p class="text-sm text-gray-600 mt-2">*(Placeholder video - replace with your school's actual video!)*</p>
                 </div>
@@ -220,7 +208,7 @@
     <section id="admissions" class="py-20 bg-amber-100 rounded-lg shadow-inner-lg my-10 mx-auto max-w-7xl px-6 lg:px-8">
         <div class="container mx-auto text-center">
             <h2 class="text-5xl font-extrabold text-green-800 mb-8 pb-4 border-b-4 border-green-200 inline-block">Admissions</h2>
-            <p class="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">We welcome prospective students who are eager to learn and grow in a supportive academic community. Here’s how to apply:</p>
+            <p class="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">We welcome prospective students who are eager to learn and grow in a supportive academic community. Here's how to apply:</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
                 <div class="flex flex-col items-center p-8 bg-white/20 backdrop-blur-md rounded-xl shadow-lg transform hover:scale-105 transition duration-300 border border-white/20">
                     <div class="bg-green-600 text-white rounded-full h-16 w-16 flex items-center justify-center text-3xl font-bold mb-6 shadow-md">1</div>
@@ -248,26 +236,32 @@
             <h2 class="text-5xl font-extrabold text-green-800 mb-8 pb-4 border-b-4 border-green-300 inline-block">Our School Gallery</h2>
             <p class="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">A glimpse into daily life and special events at Central Educational Foundation.</p>
 
-            <!-- Image Carousel -->
-            <div class="relative carousel-container rounded-xl shadow-lg border border-white/20">
-                <div class="carousel-track">
-                    <div class="carousel-slide">
-                        <img src="https://placehold.co/1200x600/66BB6A/FFFFFF?text=School+Event+1" alt="School Event 1" class="w-full h-auto rounded-xl">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="https://placehold.co/1200x600/4CAF50/FFFFFF?text=Classroom+Learning" alt="Classroom Learning" class="w-full h-auto rounded-xl">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="https://placehold.co/1200x600/81C784/FFFFFF?text=Sports+Day" alt="Sports Day" class="w-full h-auto rounded-xl">
-                    </div>
+            <!-- Image Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 rounded-xl shadow-lg border border-white/20 p-4">
+                <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition duration-300">
+                    <img src="students .jpg" alt="School Event 1" class="w-full h-48 object-cover">
                 </div>
-                <!-- Carousel Navigation -->
-                <button class="carousel-btn absolute top-1/2 left-4 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition" data-direction="-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
-                </button>
-                <button class="carousel-btn absolute top-1/2 right-4 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition" data-direction="1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                </button>
+                <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition duration-300">
+                    <img src="class.jpg" alt="class" class="w-full h-48 object-cover">
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition duration-300">
+                    <img src="sportday.jpg" alt="Sports Day" class="w-full h-48 object-cover">
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition duration-300">
+                    <img src="african day.jpg" alt="African Day" class="w-full h-48 object-cover">
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition duration-300">
+                    <img src="perfrom.jpg" alt="Perform" class="w-full h-48 object-cover">
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition duration-300">
+                    <img src="funday2.jpg" alt="Funday" class="w-full h-48 object-cover">
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition duration-300">
+                    <img src="cadet1.jpg" alt="cadet" class="w-full h-48 object-cover">
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition duration-300">
+                    <img src="activities.jpg" alt="Extracurricular Activities" class="w-full h-48 object-cover">
+                </div>
             </div>
         </div>
     </section>
@@ -317,21 +311,21 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Team Member 1 -->
                 <div class="bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-lg border border-white/20">
-                    <img src="https://placehold.co/150x150/FFC107/FFFFFF?text=Staff+1" alt="Staff Member 1" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md">
+                    <img src="HeadTeacher.jpg" alt="Mr. Benjamin Eyison - Head Teacher" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md">
                     <h3 class="text-2xl font-bold text-green-700">Mr. Benjamin Eyison</h3>
                     <p class="text-lg text-gray-600">Head Teacher</p>
                     <p class="text-sm mt-2">"Committed to nurturing holistic growth in every child."</p>
                 </div>
                 <!-- Team Member 2 -->
                 <div class="bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-lg border border-white/20">
-                    <img src="https://placehold.co/150x150/FFC107/FFFFFF?text=Staff+2" alt="Staff Member 2" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md">
-                    <h3 class="text-2xl font-bold text-green-700">Mr. Robert</h3>
-                    <p class="text-lg text-gray-600">Academic Coordinator</p>
+                    <img src="Rebecca.jpg" alt="Mr. Robert - Academic Coordinator" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md">
+                    <h3 class="text-2xl font-bold text-green-700">Mrs. Rebecca Wilson</h3>
+                    <p class="text-lg text-gray-600">Assistant Head Teacher</p>
                     <p class="text-sm mt-2">"Fostering a love for learning and academic excellence."</p>
                 </div>
                 <!-- Team Member 3 -->
                 <div class="bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-lg border border-white/20">
-                    <img src="https://placehold.co/150x150/FFC107/FFFFFF?text=Staff+3" alt="Staff Member 3" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md">
+                    <img src="Nat.jpg" alt="Mr. Nathaniel Fotwe - Admissions Officer" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md">
                     <h3 class="text-2xl font-bold text-green-700">Mr. Nathaniel Fotwe</h3>
                     <p class="text-lg text-gray-600">Admissions Officer</p>
                     <p class="text-sm mt-2">"Guiding new families through a smooth admission process."</p>
@@ -399,7 +393,7 @@
                     </div>
                     <!-- Google Map Embed -->
                     <div class="mt-8 rounded-xl overflow-hidden shadow-md">
-                        <iframe src="https://maps.app.goo.gl/vnXRyJFLfdPXGzXZA" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.828208423218!2d-0.1919839852377972!3d5.601980995933307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMzYnMDcuMSJOIDDCsDExJzMxLjQiVw!5e0!3m2!1sen!2sus!4v1624456789012!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <p class="text-sm text-gray-600 mt-2">*(Placeholder map - replace with your school's actual location!)*</p>
                 </div>
@@ -408,7 +402,7 @@
                 <div class="bg-white/20 backdrop-blur-md p-8 rounded-xl shadow-lg border border-white/20">
                     <h3 class="text-3xl font-bold text-green-700 mb-6 text-center">Send Us a Message</h3>
                     <!-- FORM ACTION: Replace with your Formspree endpoint -->
-                    <form id="contactForm" action="https://formspree.io/f/yourformid" method="POST" class="space-y-6">
+                    <form id="contactForm" action="https://formspree.io/f/mjvneypa" method="POST" class="space-y-6">
                         <div>
                             <label for="name" class="block text-lg font-medium text-gray-700 mb-2 text-left">Your Name</label>
                             <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition duration-200">
@@ -521,47 +515,6 @@
             });
         });
 
-        // Image Carousel Logic
-        const carouselTrack = document.querySelector('.carousel-track');
-        const carouselSlides = Array.from(document.querySelectorAll('.carousel-slide'));
-        const nextButton = document.querySelector('.carousel-btn[data-direction="1"]');
-        const prevButton = document.querySelector('.carousel-btn[data-direction="-1"]');
-        let slideIndex = 0;
-
-        function updateCarousel() {
-            carouselTrack.style.transform = `translateX(-${slideIndex * 100}%)`;
-        }
-
-        nextButton.addEventListener('click', () => {
-            slideIndex = (slideIndex + 1) % carouselSlides.length;
-            updateCarousel();
-        });
-
-        prevButton.addEventListener('click', () => {
-            slideIndex = (slideIndex - 1 + carouselSlides.length) % carouselSlides.length;
-            updateCarousel();
-        });
-
-        // Optional: Auto-play carousel
-        let autoSlideInterval;
-        function startAutoSlide() {
-            autoSlideInterval = setInterval(() => {
-                slideIndex = (slideIndex + 1) % carouselSlides.length;
-                updateCarousel();
-            }, 5000); // Change slide every 5 seconds
-        }
-
-        function stopAutoSlide() {
-            clearInterval(autoSlideInterval);
-        }
-
-        // Start auto-slide when the page loads
-        document.addEventListener('DOMContentLoaded', startAutoSlide);
-        // Pause auto-slide on hover
-        const carouselContainer = document.querySelector('.carousel-container');
-        carouselContainer.addEventListener('mouseenter', stopAutoSlide);
-        carouselContainer.addEventListener('mouseleave', startAutoSlide);
-
         // Mobile Menu Toggle Logic
         const mobileMenuButton = document.getElementById('mobileMenuButton');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -570,9 +523,18 @@
             const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
             mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
             mobileMenuButton.classList.toggle('open');
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('active'); // Use 'active' for the max-height transition
-            mobileMenu.classList.toggle('flex'); // Keep flex for column layout
+            
+            // Toggle the menu visibility
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('active');
+            } else {
+                mobileMenu.classList.remove('active');
+                // Add a small delay before adding hidden class to allow transition
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+            }
         });
     </script>
 </body>
