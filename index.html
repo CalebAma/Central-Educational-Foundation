@@ -7,7 +7,7 @@
     <!-- Favicon Placeholder (Dark Green CEF icon) -->
     <link rel="icon" href="cef.png" type="image/png">
     <!-- Google Fonts: Poppins for headings, Inter for body text -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family="Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -75,16 +75,19 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
-            position: absolute; /* Changed to absolute for proper overlay on mobile */
-            top: 100%; /* Position below header */
+            position: absolute;
+            top: 100%;
             left: 0;
             width: 100%;
-            background-color: #1D5D51; /* Match header background */
-            z-index: 40; /* Ensure it's above other content but below header if needed */
+            background-color: #1D5D51;
+            z-index: 40;
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            display: none;
         }
+
         #mobile-menu.active {
-            max-height: 300px; /* Adjust as needed based on content */
+            max-height: 300px;
+            display: block;
         }
 
         /* Hide hamburger on larger screens and show full menu */
@@ -93,13 +96,28 @@
                 display: none;
             }
             #mobile-menu {
-                max-height: none; /* Override for desktop */
-                overflow: visible; /* Override for desktop */
-                position: static; /* Reset position for desktop */
-                background-color: transparent; /* Remove background on desktop */
-                flex-direction: row; /* Ensure row direction for desktop */
+                max-height: none;
+                overflow: visible;
+                position: static;
+                background-color: transparent;
+                flex-direction: row;
                 box-shadow: none;
-                display: flex !important; /* Ensure it's always visible on desktop */
+                display: flex !important;
+            }
+        }
+        
+        /* Responsive text sizes */
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.5rem;
+            }
+            
+            section h2 {
+                font-size: 2.5rem;
             }
         }
     </style>
@@ -108,7 +126,7 @@
 
     <!-- Navigation Bar -->
     <header class="bg-green-700 text-white py-4 px-6 shadow-xl sticky top-0 z-50 rounded-b-lg">
-        <nav class="container mx-auto flex items-center justify-between relative"> <!-- Added relative for mobile menu positioning -->
+        <nav class="container mx-auto flex items-center justify-between relative">
             <div class="flex items-center flex-shrink-0">
                 <!-- Logo Placeholder (Dark Green CEF icon) -->
                 <img src="cef.png" alt="Central Educational Foundation Logo" class="h-12 w-12 mr-3 rounded-full shadow-md transform hover:scale-110 transition duration-300">
@@ -120,7 +138,7 @@
             </div>
 
             <!-- Hamburger menu button for mobile -->
-            <button id="mobileMenuButton" class="hamburger md:hidden" aria-controls="mobile-menu" aria-expanded="false">
+            <button id="mobileMenuButton" class="hamburger md:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
@@ -140,11 +158,11 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative bg-cover bg-center h-screen flex items-center justify-center text-white" style="background-image: url('students .jpg');">
+    <section id="hero" class="relative bg-cover bg-center h-screen flex items-center justify-center text-white" style="background-image: url('students.jpg');">
         <div class="hero-overlay absolute inset-0"></div>
         <div class="z-10 text-center p-8 rounded-xl bg-black/10 backdrop-blur-lg border border-white/20 max-w-4xl mx-auto shadow-2xl">
-            <h1 class="text-6xl md:text-7xl font-extrabold leading-tight drop-shadow-lg mb-6">Central Educational Foundation</h1>
-            <p class="text-3xl md:text-4xl italic font-light drop-shadow-md">"Raising Leaders , Shaping Vision , Influencing Society through Christ"</p>
+            <h1 class="text-6xl md:text-7xl font-extrabold leading-tight drop-shadow-lg mb-6 hero">Central Educational Foundation</h1>
+            <p class="text-3xl md:text-4xl italic font-light drop-shadow-md hero">"Raising Leaders , Shaping Vision , Influencing Society through Christ"</p>
             <a href="#admissions" class="mt-10 inline-block bg-red-600 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg hover:bg-red-500 transition duration-300 transform hover:scale-105">Enroll Now!</a>
         </div>
     </section>
@@ -237,28 +255,28 @@
             <!-- Image Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 rounded-xl shadow-lg border border-white/20 p-4">
                 <div class="rounded-lg overflow-hidden shadow-md group">
-                    <img src="students .jpg" alt="School Event 1" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out">
+                    <img src="students.jpg" alt="Students at Central Educational Foundation" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out" loading="lazy">
                 </div>
                 <div class="rounded-lg overflow-hidden shadow-md group">
-                    <img src="class.jpg" alt="class" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out">
+                    <img src="class.jpg" alt="Students in classroom at Central Educational Foundation" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out" loading="lazy">
                 </div>
                 <div class="rounded-lg overflow-hidden shadow-md group">
-                    <img src="sportday.jpg" alt="Sports Day" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out">
+                    <img src="sportday.jpg" alt="Sports day at Central Educational Foundation" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out" loading="lazy">
                 </div>
                 <div class="rounded-lg overflow-hidden shadow-md group">
-                    <img src="african day.jpg" alt="African Day" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out">
+                    <img src="african day.jpg" alt="African Day celebration at Central Educational Foundation" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out" loading="lazy">
                 </div>
                 <div class="rounded-lg overflow-hidden shadow-md group">
-                    <img src="perfrom.jpg" alt="Perform" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out">
+                    <img src="perfrom.jpg" alt="Student performance at Central Educational Foundation" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out" loading="lazy">
                 </div>
                 <div class="rounded-lg overflow-hidden shadow-md group">
-                    <img src="funday2.jpg" alt="Funday" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out">
+                    <img src="funday2.jpg" alt="Fun day at Central Educational Foundation" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out" loading="lazy">
                 </div>
                 <div class="rounded-lg overflow-hidden shadow-md group">
-                    <img src="cadet1.jpg" alt="cadet" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out">
+                    <img src="cadet1.jpg" alt="Cadet program at Central Educational Foundation" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out" loading="lazy">
                 </div>
                 <div class="rounded-lg overflow-hidden shadow-md group">
-                    <img src="IMG-20250819-WA0060.jpg" alt="Teachers" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out">
+                    <img src="IMG-20250819-WA0060.jpg" alt="Teachers at Central Educational Foundation" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-2000 ease-in-out" loading="lazy">
                 </div>
             </div>
         </div>
@@ -349,21 +367,21 @@
                 </div>
                 <!-- HOD 1: Kwesi Sey -->
                 <div class="bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-lg border border-white/20">
-                    <img src="Sey.jpg" alt="Kwesi Sey" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md object-cover">
+                    <img src="Sey.jpg" alt="Kwesi Sey - HOD, Upper Primary & JHS" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md object-cover">
                     <h3 class="text-2xl font-bold text-green-700">Mr. Kwesi Sey</h3>
                     <p class="text-lg text-gray-600">HOD, Upper Primary & JHS</p>
                     <p class="text-sm mt-2">"Fostering academic rigor and character development for our older students."</p>
                 </div>
                 <!-- HOD 2: Odette Mensah -->
                 <div class="bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-lg border border-white/20">
-                    <img src="https://placehold.co/128x128/d1fae5/10b981?text=OM" alt="Odette Mensah" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md object-cover">
+                    <img src="Odette.jpg" alt="Odette Mensah - HOD, KG & Lower Primary" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md object-cover">
                     <h3 class="text-2xl font-bold text-green-700">Ms. Odette Mensah</h3>
                     <p class="text-lg text-gray-600">HOD, KG & Lower Primary</p>
                     <p class="text-sm mt-2">"Nurturing early learning and building strong foundations for our youngest learners."</p>
                 </div>
                 <!-- HOD 3: Susuana Mensah -->
                 <div class="bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-lg border border-white/20">
-                    <img src="susana.jpg" alt="Susuana Mensah" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md object-cover">
+                    <img src="susana.jpg" alt="Susuana Mensah - HOD, DayCare Department" class="rounded-full w-32 h-32 mx-auto mb-4 shadow-md object-cover">
                     <h3 class="text-2xl font-bold text-green-700">Ms. Susuana Mensah</h3>
                     <p class="text-lg text-gray-600">HOD, DayCare Department</p>
                     <p class="text-sm mt-2">"Providing a safe, stimulating, and caring environment for our little ones."</p>
@@ -426,8 +444,8 @@
                     <div class="space-y-6 text-lg">
                         <p><strong class="font-semibold text-green-800">Address:</strong> Cape Coast Behind PWD TanTri, Ghana</p>
                         <p><strong class="font-semibold text-green-800">Phone:</strong> +233 24 258 3476</p>
-                        <p><strong class="font-semibold text-green-800">Email:</b> info@centraleducationalfoundation.edu.gh</p>
-                        <p><strong class="font-semibold text-green-800">Office Hours:</b> Mon-Fri, 8:00 AM - 4:00 PM</p>
+                        <p><strong class="font-semibold text-green-800">Email:</strong> info@centraleducationalfoundation.edu.gh</p>
+                        <p><strong class="font-semibold text-green-800">Office Hours:</strong> Mon-Fri, 8:00 AM - 4:00 PM</p>
                     </div>
                     <!-- Google Map Embed -->
                     <div class="mt-8 rounded-xl overflow-hidden shadow-md">
@@ -464,7 +482,7 @@
     <!-- Footer -->
     <footer class="bg-green-900 text-white p-8 text-center rounded-t-lg shadow-inner">
         <p class="text-lg">&copy; 2025 Central Educational Foundation. All rights reserved.</p>
-        <p class="text-md mt-2">Made By Caleb Amartey Amarh</p>
+        <p class="text-md mt-2">Made By <a href="https://yourportfolio.com" class="text-amber-200 hover:text-white transition duration-300">Caleb Amartey Amarh</a></p>
     </footer>
 
     <!-- Scroll-to-Top Button -->
@@ -486,18 +504,45 @@
                 // Close the mobile menu after clicking a link
                 const mobileMenu = document.getElementById('mobile-menu');
                 const mobileMenuButton = document.getElementById('mobileMenuButton');
-                if (mobileMenu.classList.contains('active')) { // Check if it's active based on class, not hidden
+                if (mobileMenu.classList.contains('active')) {
                     mobileMenu.classList.remove('active');
-                    mobileMenu.classList.add('hidden'); // Re-add hidden if active was removed
+                    mobileMenu.classList.add('hidden');
                     mobileMenuButton.classList.remove('open');
                     mobileMenuButton.setAttribute('aria-expanded', 'false');
                 }
             });
         });
 
+        // Form validation function
+        function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            if (!name) {
+                alert('Please enter your name');
+                return false;
+            }
+            
+            if (!email || !email.includes('@')) {
+                alert('Please enter a valid email address');
+                return false;
+            }
+            
+            if (!message) {
+                alert('Please enter your message');
+                return false;
+            }
+            
+            return true;
+        }
+
         // Handle contact form submission
         document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault(); // Prevent actual form submission
+            
+            if (!validateForm()) return;
+            
             const formMessage = document.getElementById('formMessage');
             formMessage.textContent = 'Sending...';
             formMessage.className = 'mt-4 text-center text-lg font-semibold text-gray-600';
@@ -563,16 +608,8 @@
             mobileMenuButton.classList.toggle('open');
             
             // Toggle the menu visibility
-            if (mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.remove('hidden');
-                mobileMenu.classList.add('active');
-            } else {
-                mobileMenu.classList.remove('active');
-                // Add a small delay before adding hidden class to allow transition
-                setTimeout(() => {
-                    mobileMenu.classList.add('hidden');
-                }, 300);
-            }
+            mobileMenu.classList.toggle('active');
+            mobileMenu.classList.toggle('hidden');
         });
     </script>
 </body>
